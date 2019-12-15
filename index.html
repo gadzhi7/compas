@@ -28,9 +28,9 @@
     </nav>
     <div class="mobile_nav">
       <div class="mobile_nav_menu">
-        <img src="img/menu-line.svg" alt="">
-        <img src="img/menu-line.svg" alt="">
-        <img src="img/menu-line.svg" alt="">
+        <img src="img/menu-line.svg" alt="открыть меню">
+        <img src="img/menu-line.svg" alt="открыть меню">
+        <img src="img/menu-line.svg" alt="открыть меню">
       </div>
       <p class="logo"><span class="text-red">Expert</span>Target</p>
       <a href="" class="mobile_nav_tel">
@@ -39,11 +39,16 @@
     </div>
   </div>
 
-  <div id="mobile-menu" class="fixed_menu_wrapper">
+  <div id="mobile-menu" class="mobile_menu_wrapper">
+    <div class="mobile_menu_overlay"></div>
     <nav class="mobile_menu">
+      <div class="mobile_menu_close">
+        <img src="img/menu-line.svg" alt="закрыть меню">
+        <img src="img/menu-line.svg" alt="закрыть меню">
+      </div>
       <div class="mobile_menu_head">
-        <p href="#" class="logo"><span class="text-red">Expert</span>Target</p>
-         <p><a href="#" class="link_select">Ru</a></li>
+        <p class="logo"><span class="text-red">Expert</span>Target</p>
+         <a href="#" class="link_select">Ru</a>
       </div>
        <ul class="mobile_menu_links">
          <li class="mobile_menu_active"><a href="#">Контекстная реклама</a></li>
@@ -53,11 +58,12 @@
          <li><a href="#">Контакты</a></li>
        </ul>
        <div class="mobile_menu_bottom">
-         <a href="tel:+70000000000" class="mobile_menu_tel">+7 000 000 00 00</a>
+         <p><a href="tel:+70000000000" class="mobile_menu_tel">+7 000 000 00 00</a></p>
          <a href="#" class="main_btn">Оформить заказ</a>
        </div>
     </nav>
   </div>
+
 
 
   <div class="wrapper">
@@ -155,49 +161,67 @@
     <section class="main_tabs">
       <h2>Преимущества контекстной рекламы</h2>
       <div class="tabs">
-        <div class="tabs__link">
-          <a href="#" class="active_tab">
+        <div class="tabs__links">
+          <div class="tabs__link active_tab">
             <img src="img\tagetlh.svg" alt="Целевая аудитория">
             <span>Целевая аудитория</span>
-          </a>
-          <a href="#">
+            <template class="tab-info">
+              <div class="tab_full-width">
+                <img src="img\targetlh-img.svg" alt="Целевая аудитория">
+                <p class="text">Показ рекламных объявлений в поисковых системах и социальных сетях людям, которые заинтересованы в ваших товарах или услугах. У контекстной рекламы огромные возможности настройки целевой аудитории, а именно: пол, возраст, интересы и увлечения, образование, работа, места посещений и многое другое. Всего более 50 параметров. Мы поможем вам организовать эффективную рекламную компанию.</p>
+              </div>
+            </template>
+          </div>
+
+          <div class="tabs__link">
             <img src="img/greatreach.svg" alt="Большой охват">
             <span>Большой охват</span>
-          </a>
-          <a href="#">
+            <template class="tab-info">
+              <div class="tab_full-width">
+                <img src="img\greatreach-img.svg" alt="Большой охват">
+                <span>Пользователей в 2019 году</span>
+                <p class="text">Поисковые системы и социальные сети посещают миллионы людей ежедневно. Не упускайте возможность найти ваших клиентов среди интернет пользователей. Контекстная реклама подходит как мелкому так и крупному бизнесу.</p>
+              </div>
+            </template>
+          </div>
+
+          <div class="tabs__link">
             <img src="img\geolocation.svg" alt="Геолокация">
             <span>Геолокация</span>
-          </a>
-          <a href="#">
-            <img src="img\media.svg" alt="Медиа">
-            <span>Медиа</span>
-          </a>
-          <a href="#">
+            <template class="tab-info">
+              <div class="tab_half-width">
+                <img src="img\geolocation-img.svg" alt="Геолокация">
+                <p class="text">Показывайте ваши объявления людям, которые проживают в нужных регионах или посещают определенные места. Возможно задавать Страны, конкретные города, улицы и даже любую точку или место на карте. Что позволяет находить ближайших клиентов к вашему бизнесу.</p>
+              </div>
+            </template>
+          </div>
+
+            <div class="tabs__link">
+              <img src="img\media.svg" alt="Медиа">
+              <span>Медиа</span>
+              <template class="tab-info">
+                <div class="tab_full-width">
+                  <img src="img\media-img.svg" alt="Медиа">
+                  <p class="text">Медиайная реклама поможет подробно и быстро рассказать о вашем продукте или услуги. Возможно размещать баннера и целые видеоролики. Такая реклама не останется не замеченной.</p>
+                </div>
+              </template>
+          </div>
+          <div class="tabs__link">
             <img src="img\buy.svg" alt="Оплата за результат">
             <span>Оплата за результат</span>
-          </a>
+            <template class="tab-info">
+              <div class="tab_full-width">
+                <img src="img\buy-img.svg" alt="Оплата за результат">
+                <p class="text">Возможно настроить рекламные компании так, что вы будете платить не за клики или показы, а конкретно за результат. Например, оформленный заказ на вашем сайте, регистрацию, прохождение опроса, заполнение различных форм и.т.д. Данный вид рекламы требует профессиональных знаний и тонкой настройки. Наши специалисты с радостью помогут вам!</p>
+              </div>
+            </template>
+          </div>
+
         </div>
         <div class="tabs__content">
-          <div class="tab_full-width show">
+          <div class="tab_full-width">
             <img src="img\targetlh-img.svg" alt="Целевая аудитория">
             <p class="text">Показ рекламных объявлений в поисковых системах и социальных сетях людям, которые заинтересованы в ваших товарах или услугах. У контекстной рекламы огромные возможности настройки целевой аудитории, а именно: пол, возраст, интересы и увлечения, образование, работа, места посещений и многое другое. Всего более 50 параметров. Мы поможем вам организовать эффективную рекламную компанию.</p>
-          </div>
-          <div class="tab_full-width">
-            <img src="img\greatreach-img.svg" alt="Большой охват">
-            <span>Пользователей в 2019 году</span>
-            <p class="text">Поисковые системы и социальные сети посещают миллионы людей ежедневно. Не упускайте возможность найти ваших клиентов среди интернет пользователей. Контекстная реклама подходит как мелкому так и крупному бизнесу.</p>
-          </div>
-          <div class="tab_half-width">
-            <img src="img\geolocation-img.svg" alt="Геолокация">
-            <p class="text">Показывайте ваши объявления людям, которые проживают в нужных регионах или посещают определенные места. Возможно задавать Страны, конкретные города, улицы и даже любую точку или место на карте. Что позволяет находить ближайших клиентов к вашему бизнесу.</p>
-          </div>
-          <div class="tab_full-width">
-            <img src="img\media-img.svg" alt="Медиа">
-            <p class="text">Медиайная реклама поможет подробно и быстро рассказать о вашем продукте или услуги. Возможно размещать баннера и целые видеоролики. Такая реклама не останется не замеченной.</p>
-          </div>
-          <div class="tab_full-width">
-            <img src="img\buy-img.svg" alt="Оплата за результат">
-            <p class="text">Возможно настроить рекламные компании так, что вы будете платить не за клики или показы, а конкретно за результат. Например, оформленный заказ на вашем сайте, регистрацию, прохождение опроса, заполнение различных форм и.т.д. Данный вид рекламы требует профессиональных знаний и тонкой настройки. Наши специалисты с радостью помогут вам!</p>
           </div>
         </div>
       </div>
@@ -258,8 +282,8 @@
     <a href="#" class="main_link">скачать полный прайс pdf</a>
     <form action="">
       <div class="action_inputs">
-        <select name="service_type">
-          <option value="" disabled selected>Тип услуги</option>
+        <select name="service_type" required>
+          <option value="" disabled selected class="hidden">Тип услуги</option>
           <option value="">Контекстная реклама</option>
           <option value="">Соцсети</option>
           <option value="">PR Компания</option>

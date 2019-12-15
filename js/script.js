@@ -20,20 +20,29 @@ $(document).ready(function() {
   // mobile menu
 
   $('.mobile_nav_menu').on('click', function () {
-    $('#mobile-menu').show();
+    $('#mobile-menu').css('left', '0');
+    $('.wrapper').css({'transform': 'translateX(calc(100% - 40px))'});
+  });
+
+  $('.mobile_menu_close, .mobile_menu_overlay').on('click', function () {
+    $('#mobile-menu').css('left', '-100%');
+    $('.wrapper').css({'transform': 'translateX(0)'});
   });
 
 
+
+
   // tabs
-  $('.tabs__link a').on('click', function(e) {
-    e.preventDefault();
+  $('.tabs__links .tabs__link').on('click', function() {
     if ($(this).hasClass('active_tab')) return
 
-    $('.tabs__link a').removeClass('active_tab');
+    $('.tabs__links .tabs__link').removeClass('active_tab');
     $(this).addClass('active_tab');
 
-    $('.tabs__content div').removeClass('show');
-    $('.tabs__content div:eq(' + [$(this).index()] + ')').addClass('show');
+    $('.tabs__content').html($(this).find('.tab-info').html())
+
+    // $('.tabs__content div').removeClass('show');
+    // $('.tabs__content div:eq(' + [$(this).index()] + ')').addClass('show');
   })
 
   //adventure
