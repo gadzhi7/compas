@@ -12,11 +12,14 @@ b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, c
 
 $red: #E81E1E;
 
+$default_size: 20px;
+
 body {
 	font-family: 'Proxima Nova', sans-serif;
 	width: 100%;
 	color: #000000;
 	overflow-x: hidden;
+  font-size: $default_size;
 }
 
 .wrapper {
@@ -41,15 +44,15 @@ a {
 }
 
 .text {
-	font-size: 18px;
-	line-height: 28px;
+	font-size: 0.9rem;
+	line-height: 1.4rem;
 	color: #000000;
 }
 
 h2 {
 	font-weight: bold;
-	font-size: 36px;
-	line-height: 44px;
+	font-size: 1.8rem;
+	line-height: 2.2rem;
 	color: #3C3E42;
 }
 
@@ -67,9 +70,9 @@ h2 {
 
 .main_link {
 	font-weight: bold;
-	font-size: 16px;
+	font-size: 0.8rem;
 	color: #415A7D;
-	line-height: 30px;
+	line-height: 1.5rem;
 	padding-left: 37px;
 	text-transform: uppercase;
 	background-image: url('../img/inbox.svg');
@@ -90,7 +93,7 @@ a.link_select {
 
 .logo {
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 1rem;
 	color: #3C3E42;
 }
 
@@ -105,7 +108,7 @@ header {
 	margin-top: 42px;
 	margin-bottom: 80px;
 	height: 28px;
-	line-height: 28px;
+	line-height: 1.4rem;
 
 	.logo {
 		margin-right: 45px;
@@ -126,7 +129,7 @@ header {
 
 		li {
 			margin-right: 37px;
-			font-size: 14px;
+			font-size: 0.7rem;
 			text-transform: uppercase;
 			font-weight: bold;
 
@@ -145,7 +148,7 @@ header {
 	}
 
 	.header_tel {
-		font-size: 16px;
+		font-size: 0.8rem;
 		font-weight: bold;
 		color: #3C3E42;
 
@@ -167,10 +170,10 @@ header {
 
 		h1 {
 			font-weight: bold;
-			font-size: 48px;
+			font-size: 2.4rem;
 			max-width: 428px;
 			color: #3C3E42;
-			line-height: 56px;
+			line-height: 2.8rem;
 			margin-bottom: 34px;
 
 			span {
@@ -267,7 +270,7 @@ header {
 
 			span {
 				text-transform: uppercase;
-				font-size: 24px;
+				font-size: 1.2rem;
 				font-weight: bold;
 			}
 		}
@@ -275,8 +278,8 @@ header {
 		p {
 			width: 245px;
 			margin-top: 60px;
-			font-size: 24px;
-			line-height: 36px;
+			font-size: 1.2rem;
+			line-height: 1.8rem;
 		}
 	}
 
@@ -369,8 +372,8 @@ header {
 
 			 .tabs__link {
 				 color: rgba(#3B4A6D, 0.5);
-				 font-size: 24px;
-				 line-height: 30px;
+				 font-size: 1.2rem;
+				 line-height: 1.5rem;
 				 width: 20%;
 				 border-bottom: 2px solid #CFD6E6;
 				 display: flex;
@@ -443,8 +446,8 @@ header {
 
 					span {
 						font-weight: 600;
-						font-size: 29px;
-						line-height: 50px;
+						font-size: 1.4rem;
+						line-height: 2.5rem;
 						text-align: center;
 						display: block;
 						color: #CFD6E6;
@@ -452,7 +455,7 @@ header {
 
 					.text {
 						margin-top: 38px;
-						line-height: 32px;
+						line-height: 1.6rem;
 						text-align: center;
 					}
 				}
@@ -464,7 +467,7 @@ header {
 
 					.text {
 						max-width: 455px;
-						line-height: 32px;
+						line-height: 1.6rem;
 					}
 				}
 			}
@@ -485,7 +488,7 @@ header {
 			text-transform: uppercase;
 			color: #415A7D;
 			font-weight: bold;
-			font-size: 16px;
+			font-size: 0.8rem;
 			display: flex;
 			align-items: center;
 
@@ -534,8 +537,8 @@ header {
 
 		.advantage_scroll__count {
 			font-weight: bold;
-			font-size: 16px;
-			line-height: 22px;
+			font-size: 0.8rem;
+			line-height: 1.1rem;
 			text-align: center;
 		}
 	}
@@ -616,7 +619,7 @@ header {
 
 			* {
 				font-family: "Proxima Nova", sans-serif;
-				font-size: 16px;
+				font-size: 0.8rem;
 				line-height: 1;
 				height: 54px;
 				margin-bottom: 20px;
@@ -679,7 +682,7 @@ header {
 			.main_btn {
 				padding: 0 39px;
 				width: 245px;
-				font-size: 16px;
+				font-size: 0.8rem;
 				cursor: pointer;
 			}
 		}
@@ -691,7 +694,7 @@ header {
 			margin: 0 auto 73px;
 			text-align: center;
 			color: #000;
-			font-size: 14px;
+			font-size: 0.7rem;
 			line-height: 2;
 			cursor: pointer;
 
@@ -755,7 +758,7 @@ footer {
 
 		.footer_tel {
 			font-weight: bold;
-			font-size: 16px;
+			font-size: 0.8rem;
 			color: #3C3E42;
 			transition: 0.3s;
 
@@ -795,7 +798,7 @@ footer {
 	}
 
 	.footer_text {
-		font-size: 12px;
+		font-size: 0.6rem;
 		text-align: center;
 		color: #737B8D;
 		padding-bottom: 50px;
@@ -836,7 +839,7 @@ footer {
 
 				li {
 					margin-right: 34px;
-					font-size: 14px;
+					font-size: 0.7rem;
 					text-transform: uppercase;
 					font-weight: bold;
 
@@ -861,7 +864,7 @@ footer {
 				text-transform: uppercase;
 				font-weight: 600;
 				color: $red;
-				font-size: 14px;
+				font-size: 0.7rem;
 				border: 2px solid $red;
 				border-radius: 4px;
 				transition: 0.3s;
@@ -971,8 +974,8 @@ footer {
 
 			.link_select {
 				font-weight: bold;
-				font-size: 14px;
-				line-height: 20px;
+				font-size: 0.7rem;
+				line-height: 1rem;
 				text-transform: uppercase;
 				color: #3C3E42;
 				margin-left: 55px;
@@ -985,10 +988,10 @@ footer {
 				height: 56px;
 
 				a {
-					line-height: 56px;
+					line-height: 2.8rem;
 					color: #3C3E42;
 					font-weight: 600;
-					font-size: 22px;
+					font-size: 1.1rem;
 					padding-left: 21px;
 				}
 
@@ -1020,7 +1023,7 @@ footer {
 
 				.mobile_menu_tel {
 					font-weight: bold;
-					font-size: 16px;
+					font-size: 0.8rem;
 					color: #3C3E42;
 					min-width: 140px;
 				}
@@ -1054,10 +1057,15 @@ footer {
 }
 
 
+@media (min-width: 2560px) {
+
+}
+
+
 @media (max-width: 1040px) {
 	.fixed_menu_wrapper .fixed_menu ul.fixed_menu_links li {
     margin-right: 20px;
-    font-size: 14px;
+    font-size: 0.7rem;
     text-transform: uppercase;
     font-weight: bold;
 	}
@@ -1077,7 +1085,7 @@ footer {
 
 		ul.fixed_menu_links li {
 			margin-right: 18px;
-			line-height: 40px;
+			line-height: 2rem;
 		}
 
 		.main_outline_btn {
@@ -1102,7 +1110,7 @@ footer {
 
 				.text {
 					margin-top: 38px;
-					line-height: 32px;
+					line-height: 1.6rem;
 					text-align: center;
 					max-width: 873px;
 				}
