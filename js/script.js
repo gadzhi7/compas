@@ -3,11 +3,9 @@ $(document).ready(function() {
   // fixed menu
   var heightAfterShowMenu = Number($('header').outerHeight(true)) + Number($('.banner').outerHeight(true)) + Number($('.main_types').outerHeight());
   var menu = $("#fixed_menu");
-
   $(window).resize(function() {
     heightAfterShowMenu = Number($('header').outerHeight(true)) + Number($('.banner').outerHeight(true)) + Number($('.main_types').outerHeight());
   });
-
   $(document).scroll(function() {
     var y = $(document).scrollTop()
     if (y >= heightAfterShowMenu) {
@@ -19,14 +17,18 @@ $(document).ready(function() {
 
   // mobile menu
 
-  $('.mobile_nav_menu').on('click', function () {
+  $('.mobile_nav_menu').on('click', function() {
     $('#mobile-menu').css('left', '0');
-    $('.wrapper').css({'transform': 'translateX(calc(100% - 40px))'});
+    $('.wrapper').css({
+      'transform': 'translateX(calc(100% - 40px))'
+    });
   });
 
-  $('.mobile_menu_close, .mobile_menu_overlay').on('click', function () {
+  $('.mobile_menu_close, .mobile_menu_overlay').on('click', function() {
     $('#mobile-menu').css('left', '-100%');
-    $('.wrapper').css({'transform': 'translateX(0)'});
+    $('.wrapper').css({
+      'transform': 'translateX(0)'
+    });
   });
 
 
@@ -56,16 +58,18 @@ $(document).ready(function() {
   var advantageCoordY = 0
 
   $('.advantage_scroll__btn button').on('mousedown', function(e) {
+    e.preventDefault();
     clicking = true;
     advantageCoordY = e.clientY
   });
 
   $('.advantage_scroll').on('mousemove', function(e) {
+    e.preventDefault();
     if (clicking == false) return;
 
-    if(advantageCoordY + 30 < e.clientY) {
+    if (advantageCoordY + 30 < e.clientY) {
 
-      if($('.advantage_items').scrollTop() >= ($('.advantage_items')[0].scrollHeight - $('.advantage_items').outerHeight() - 59)) return
+      if ($('.advantage_items').scrollTop() >= ($('.advantage_items')[0].scrollHeight - $('.advantage_items').outerHeight() - 59)) return
       $('.advantage_scroll__btn button').css('top', Number($('.advantage_scroll__btn button').css('top').replace('px', '')) + advantageBtnStep)
       $('.advantage_items').scrollTop($('.advantage_items').scrollTop() + advantageScrollStep);
 
@@ -74,7 +78,7 @@ $(document).ready(function() {
       advantageCoordY = e.clientY
     } else if (advantageCoordY - 30 > e.clientY) {
 
-      if($('.advantage_items').scrollTop() === 0) return
+      if ($('.advantage_items').scrollTop() === 0) return
       $('.advantage_scroll__btn button').css('top', Number($('.advantage_scroll__btn button').css('top').replace('px', '')) - advantageBtnStep)
       $('.advantage_items').scrollTop($('.advantage_items').scrollTop() - advantageScrollStep);
 
@@ -96,76 +100,78 @@ $(document).ready(function() {
   var costScrollStep = ($('.cost_elements')[0].scrollHeight - $('.cost_elements').outerHeight()) / costLineLength;
   var costLineStep = ($('.cost_scroll_line').height() - $('.cost_scroll_line span').height()) / costLineLength;
 
-  $('.cost_scroll button').on('click', function (e) {
+  $('.cost_scroll button').on('click', function(e) {
+    e.preventDefault();
 
-      if(costLineLength <= 1) return
+    if (costLineLength <= 1) return
 
-      if($(e.target).hasClass('cost_scroll_dowm')) {
+    if ($(e.target).hasClass('cost_scroll_dowm')) {
 
-        if($('.cost_elements').scrollTop() >= ($('.cost_elements')[0].scrollHeight - $('.cost_elements').outerHeight() - 59)) return
-        $('.cost_scroll_line span').css('top', Number($('.cost_scroll_line span').css('top').replace('px', '')) + costLineStep)
-        $('.cost_elements').scrollTop($('.cost_elements').scrollTop() + costScrollStep);
+      if ($('.cost_elements').scrollTop() >= ($('.cost_elements')[0].scrollHeight - $('.cost_elements').outerHeight() - 59)) return
+      $('.cost_scroll_line span').css('top', Number($('.cost_scroll_line span').css('top').replace('px', '')) + costLineStep)
+      $('.cost_elements').scrollTop($('.cost_elements').scrollTop() + costScrollStep);
 
-      } else if($(e.target).hasClass('cost_scroll_up')) {
+    } else if ($(e.target).hasClass('cost_scroll_up')) {
 
-        if($('.cost_elements').scrollTop() === 0) return
-        $('.cost_scroll_line span').css('top', Number($('.cost_scroll_line span').css('top').replace('px', '')) - costLineStep)
-        $('.cost_elements').scrollTop($('.cost_elements').scrollTop() - costScrollStep);
+      if ($('.cost_elements').scrollTop() === 0) return
+      $('.cost_scroll_line span').css('top', Number($('.cost_scroll_line span').css('top').replace('px', '')) - costLineStep)
+      $('.cost_elements').scrollTop($('.cost_elements').scrollTop() - costScrollStep);
 
-      }
-    });
+    }
+  });
 
-    // cost modile
+  // cost modile
 
-    var touch = false;
-    var countLength = $('.cost_elements .cost_item').length;
-    $('.cost_line-mobile span').width(100 / countLength + '%');
+  var touch = false;
+  var countLength = $('.cost_elements .cost_item').length;
+  $('.cost_line-mobile span').width(100 / countLength + '%');
 
-    var mCostScrollStep = ($('.cost_elements')[0].scrollWidth - $('.cost_elements').outerWidth()) / costLineLength;
-    var mCostLineStep = ($('.cost_line-mobile').width() - $('.cost_line-mobile span').width()) / costLineLength;
-    var costCoordX = 0
+  var mCostScrollStep = ($('.cost_elements')[0].scrollWidth - $('.cost_elements').outerWidth()) / costLineLength;
+  var mCostLineStep = ($('.cost_line-mobile').width() - $('.cost_line-mobile span').width()) / costLineLength;
+  var costCoordX = 0
 
-    $('.cost_elements').on('mousedown touchstart', function(e) {
-      touch = true;
-      if (e.touches) {
-        e = e.touches[0]
-      }
+  $('.cost_elements').on('mousedown touchstart', function(e) {
+    e.preventDefault();
+    touch = true;
+    if (e.touches) {
+      e = e.touches[0]
+    }
+    costCoordX = e.clientX
+  });
+
+  $('.cost_elements').on('mousemove touchmove', function(e) {
+    e.preventDefault();
+    if (touch == false) return;
+
+    if (e.touches) {
+      e = e.touches[0]
+    }
+
+    if (costCoordX + 30 < e.clientX) {
+
+      if ($('.cost_elements').scrollLeft() === 0) return
+
+      $('.cost_line-mobile span').css('left', Number($('.cost_line-mobile span').css('left').replace('px', '')) - mCostLineStep)
+      $('.cost_elements').scrollLeft($('.cost_elements').scrollLeft() - mCostScrollStep);
+
+
       costCoordX = e.clientX
-    });
+    } else if (costCoordX - 30 > e.clientX) {
 
-    $('.cost_elements').on('mousemove touchmove', function(e) {
+      if ($('.cost_elements').scrollLeft() >= ($('.cost_elements')[0].scrollWidth - $('.cost_elements').outerWidth() - 20)) return
 
-      if (touch == false) return;
-
-      if (e.touches) {
-        e = e.touches[0]
-      }
-
-      if(costCoordX + 30 < e.clientX) {
-
-        if($('.cost_elements').scrollLeft() === 0) return
-
-        $('.cost_line-mobile span').css('left', Number($('.cost_line-mobile span').css('left').replace('px', '')) - mCostLineStep)
-        $('.cost_elements').scrollLeft($('.cost_elements').scrollLeft() - mCostScrollStep);
-
-
-        costCoordX = e.clientX
-      } else if (costCoordX - 30 > e.clientX) {
-
-        if($('.cost_elements').scrollLeft() >= ($('.cost_elements')[0].scrollWidth - $('.cost_elements').outerWidth() - 20)) return
-
-        $('.cost_line-mobile span').css('left', Number($('.cost_line-mobile span').css('left').replace('px', '')) + mCostLineStep)
-        $('.cost_elements').scrollLeft($('.cost_elements').scrollLeft() + mCostScrollStep);
+      $('.cost_line-mobile span').css('left', Number($('.cost_line-mobile span').css('left').replace('px', '')) + mCostLineStep)
+      $('.cost_elements').scrollLeft($('.cost_elements').scrollLeft() + mCostScrollStep);
 
 
 
-        costCoordX = e.clientX
-      }
-    });
+      costCoordX = e.clientX
+    }
+  });
 
-    $(document).on('mouseup touchend', function() {
-      touch = false;
-    })
+  $(document).on('mouseup touchend', function() {
+    touch = false;
+  })
 
 
 });
