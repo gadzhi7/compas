@@ -1,0 +1,14 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="100" height="100" fill="white"/>
+<path d="M50 64.5C41.9919 64.5 35.5 58.0081 35.5 50C35.5 41.9919 41.9919 35.5 50 35.5C58.0081 35.5 64.5 41.9919 64.5 50C64.5 58.0081 58.0081 64.5 50 64.5Z" stroke="#3C4D5D" stroke-width="3"/>
+<path d="M50 24.5V30M50 70V75M27.5 37L32.5 40M67.5 60L72.5 63M72.5 37L67.5 40M32.5 60L27.5 63" stroke="#3C4D5D" stroke-width="3" stroke-linecap="round"/>
+<path d="M50 52.5C46.9624 52.5 44.5 50.0376 44.5 47C44.5 43.9624 46.9624 41.5 50 41.5C53.0376 41.5 55.5 43.9624 55.5 47C55.5 50.0376 53.0376 52.5 50 52.5Z" stroke="#3C4D5D" stroke-width="3"/>
+<path d="M42.5 63V63C42.5 59.9624 44.9624 57.5 48 57.5H52C55.0376 57.5 57.5 59.9624 57.5 63V63" stroke="#3C4D5D" stroke-width="3"/>
+<circle cx="50" cy="50" r="39" stroke="#3C4D5D" stroke-width="3" stroke-linecap="round" stroke-dasharray="10 10"/>
+<circle cx="50" cy="12" r="6.5" fill="#E81E1E" stroke="#3C4D5D" stroke-width="3"/>
+<circle cx="50" cy="88" r="6.5" fill="#E81E1E" stroke="#3C4D5D" stroke-width="3"/>
+<circle cx="82.9087" cy="31.0005" r="6.5" transform="rotate(60 82.9087 31.0005)" fill="#E81E1E" stroke="#3C4D5D" stroke-width="3"/>
+<circle cx="17.0913" cy="69.0005" r="6.5" transform="rotate(60 17.0913 69.0005)" fill="#E81E1E" stroke="#3C4D5D" stroke-width="3"/>
+<circle cx="82.9087" cy="69.0005" r="6.5" transform="rotate(120 82.9087 69.0005)" fill="#E81E1E" stroke="#3C4D5D" stroke-width="3"/>
+<circle cx="17.0913" cy="31.0005" r="6.5" transform="rotate(120 17.0913 31.0005)" fill="#E81E1E" stroke="#3C4D5D" stroke-width="3"/>
+</svg>
