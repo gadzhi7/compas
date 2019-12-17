@@ -481,6 +481,88 @@ header {
 	padding: 60px 0;
 	background-color: #f6f9fc;
 	margin-bottom: 150px;
+
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .rates_info, .rates_item {
+    width: calc(33% - 20px);
+    height: 260px;
+    margin-bottom: 30px;
+  }
+
+  .rates_info {
+    img {
+      display: block;
+      margin-bottom: 26px;
+    }
+
+    .rates_showall {
+      color: #415A7D;
+      font-weight: bold;
+      font-size: 0.8em;
+      text-transform: uppercase;
+      width: fit-content;
+      margin-top: 42px;
+      cursor: pointer;
+      padding-right: 39px;
+      background-image: url(../img/chevron-down.svg);
+      background-position: top right;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .rates_item {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 6px rgba(18, 28, 65, 0.1);
+    border-radius: 14px;
+    padding: 0 21px 20px 29px;
+    box-sizing: border-box;
+
+    .rates_line {
+      width: calc(100% - 56px);
+      height: 4px;
+      background-color: $red;
+      border-radius: 0px 0px 4px 4px;
+      margin: 0 auto;
+    }
+
+    h3 {
+      margin: 27px 0 18px;
+      color: #3C3E42;
+      font-size: 1em;
+      font-weight: bold;
+    }
+
+    ul {
+      list-style: none;
+
+      li {
+        font-size: 0.7em;
+        display: flex;
+        align-items: center;
+
+        &:before {
+          content: "";
+          background-color: $red;
+          font-weight: bold;
+          margin-right: 14px;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+        }
+
+        &:not(:last-of-type) {
+          margin-bottom: 13px;
+        }
+      }
+    }
+
+  }
 }
 
 .advantage {
