@@ -103,8 +103,6 @@ a.link_select {
 /* blocks */
 
 header {
-  display: none!important;
-
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -162,8 +160,6 @@ header {
 }
 
 .banner {
-  display: none!important;
-
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 160px;
@@ -208,8 +204,6 @@ header {
 }
 
 .main_types {
-  display: none!important;
-
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 70px;
@@ -230,8 +224,6 @@ header {
 }
 
 .customization {
-  display: none!important;
-
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -250,10 +242,23 @@ header {
 		}
 	}
 }
+.customization.full-center {
+  max-width: 640px;
+  flex-direction: column;
+  @include mauto;
+
+  img {
+    width: 100%;
+    margin-bottom: 57px;
+  }
+
+  .customization_info {
+    text-align: center;
+    max-width: 430px;
+  }
+}
 
 .cost {
-  display: none!important;
-
 	display: flex;
 	justify-content: space-between;
 
@@ -364,9 +369,11 @@ header {
 		}
 	}
 }
+.cost.slider {
+  
+}
 
 .main_tabs {
-  display: none!important;
 
 	margin: 220px auto 200px;
 
@@ -500,17 +507,17 @@ header {
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
+    max-height: 570px;
+    overflow: hidden;
   }
 
   .rates_info, .rates_item {
-    width: calc(33% - 20px);
+    width: calc(33.3% - 20px);
     height: 260px;
     margin-bottom: 30px;
   }
 
   .rates_info {
-    display: none!important;
-
     img {
       display: block;
       margin-bottom: 26px;
@@ -532,14 +539,15 @@ header {
   }
 
   .rates_item {
+    display: flex;
+    flex-direction: column;
     background: #FFFFFF;
     box-shadow: 0px 4px 6px rgba(18, 28, 65, 0.1);
     border-radius: 14px;
     padding: 0 21px 20px 29px;
     box-sizing: border-box;
-    .rates_line {
-      display: none!important;
 
+    .rates_line {
       width: calc(100% - 56px);
       height: 4px;
       background-color: $red;
@@ -548,8 +556,6 @@ header {
     }
 
     h3 {
-      display: none!important;
-
       margin: 27px 0 18px;
       color: #3C3E42;
       font-size: 1em;
@@ -557,9 +563,8 @@ header {
     }
 
     ul {
-      display: none!important;
-
       list-style: none;
+      flex: 1;
 
       li {
         font-size: 0.7em;
@@ -583,8 +588,6 @@ header {
     }
 
     .rates_item_footer {
-      display: none!important;
-
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -601,7 +604,7 @@ header {
         background-color: $red;
         border-radius: 6px;
         font-weight: bold;
-        font-weight: 0.7em;
+        font-size: 0.7em;
         text-align: center;
         display: flex;
         align-items: center;
@@ -623,8 +626,6 @@ header {
 }
 
 .advantage {
-  display: none!important;
-
 	display: flex;
 	justify-content: space-between;
 
@@ -698,7 +699,7 @@ header {
 
 		.advantage_item {
 			display: flex;
-			justify-content: space-between;
+			justify-content: flex-start;
 			align-items: center;
 			margin-bottom: 60px;
 
@@ -726,8 +727,6 @@ header {
 }
 
 .action_img {
-  display: none!important;
-
 	padding: 0 20px;
 	box-sizing: border-box;
 	text-align: center;
@@ -741,8 +740,6 @@ header {
 }
 
 .action {
-  display: none!important;
-
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -873,8 +870,6 @@ header {
 }
 
 footer {
-  display: none!important;
-
 	background-color: #F6F9FE;
 
 	.wrapper {
@@ -956,8 +951,6 @@ footer {
 }
 
 .fixed_menu_wrapper {
-  display: none!important;
-
 
 	display: none;
 
@@ -1031,8 +1024,6 @@ footer {
 }
 
 .mobile_nav {
-  display: none!important;
-
 	display: none;
 	height: 56px;
 	width: 100%;
@@ -1059,9 +1050,6 @@ footer {
 }
 
 .mobile_menu_wrapper {
-  display: none!important;
-
-
 	position: fixed;
 	top: 0;
 	left: -200%;
@@ -1227,6 +1215,10 @@ footer {
     text-transform: uppercase;
     font-weight: bold;
 	}
+
+  .rates .rates_info, .rates .rates_item {
+    width: calc(50% - 20px)
+  }
 }
 
 
@@ -1422,6 +1414,81 @@ footer {
 
 	}
 
+  .rates {
+    margin-bottom: 48px;
+    padding: 32px 0 16px;
+
+    .wrapper {
+      display: block;
+      flex-wrap: nowrap;
+    }
+
+    .rates_info {
+      height: auto;
+
+      .rates_showall {
+       display: none;
+       }
+     }
+
+    .rates_item {
+      width: 100%;
+      display: none;
+    }
+
+    .showed {
+      display: block;
+    }
+
+    .rates_slide_controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .rates_slide_left, .rates_slide_right {
+        background-color: #fff;
+        border-radius: 50%;
+        width: 48px;
+        height: 48px;
+        flex-shrink: 0;
+        background-image: url(../img/chevron-down.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .rates_slide_left {
+        transform: rotate(90deg);
+      }
+
+      .rates_slide_right {
+        transform: rotate(-90deg);
+      }
+
+      .rates_dots {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 0 5px;
+
+        span {
+          background-color: #CFD6E6;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          margin-bottom: 10px;
+
+          &:not(:last-of-type) {
+            margin-right: 16px;
+          }
+        }
+
+        span.active {
+          background-color: $red;
+        }
+      }
+    }
+  }
+
 	.advantage {
 		flex-wrap: wrap;
 
@@ -1529,7 +1596,6 @@ footer {
 
 }
 
-
 @media (max-width: 650px) {
 
 	.wrapper {
@@ -1610,54 +1676,6 @@ footer {
 
 			}
 		}
-
-  .rates {
-    .wrapper {
-      display: block;
-      flex-wrap: nowrap;
-    }
-
-    .rates_item {
-      width: 100%;
-      display: none;
-    }
-
-    .showed {
-      display: block;
-    }
-
-    .rates_slide_controls {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      .rates_slide_left, .rates_slide_right {
-        background-color: #fff;
-        border-radius: 50%;
-        width: 20px;
-        height: 20px;
-        flex-shrink: 0;
-      }
-
-      .rates_dots {
-        display: flex;
-        justify-content: space-around;
-
-        span {
-          background-color: #fff;
-          width: 6px;
-          height: 6px;
-          border-radius: 50%;
-          margin: 0 5px;
-        }
-
-        span.active {
-          background-color: $red;
-        }
-      }
-    }
-  }
-
 
 }
 
