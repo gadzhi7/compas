@@ -562,6 +562,37 @@ header {
       }
     }
 
+    .rates_item_footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .rates_price {
+        color: #3C3E42;
+        font-weight: bold;
+        font-size: 1em;
+      }
+
+      .rates_readmore {
+        color: #fff;
+        text-transform: uppercase;
+        background-color: $red;
+        border-radius: 6px;
+        font-weight: bold;
+        font-weight: 0.7em;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 12px;
+
+        img {
+          margin-left: 7px;
+          transform: rotate(-90deg);
+        }
+      }
+    }
+
   }
 }
 
