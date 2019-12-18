@@ -399,7 +399,7 @@ header {
     .cost_item {
       flex-shrink: 0;
       margin-bottom: 0;
-      width: 245px;
+      width: calc(25% - 25px);
       height: 145px;
 
       &:not(:last-child) {
@@ -1505,6 +1505,10 @@ footer {
 		}
 
 	}
+  .cost.slider .cost_elements .cost_item {
+    margin-bottom: 20px;
+  }
+
 
   .rates {
     margin-bottom: 48px;
