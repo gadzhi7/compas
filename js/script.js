@@ -171,27 +171,30 @@ $(document).ready(function() {
 
   // cost full slider
 
-  // $('.cost_elements .cost_slide_right').on('click', function(e) {
-  //
-  //   if ($('.cost_elements').scrollLeft() >= ($('.cost_elements')[0].scrollWidth - $('.cost_elements').outerWidth() - 20)) return
-  //   // $('.cost_elements').scrollLeft($('.cost_elements').scrollLeft() + mCostScrollStep);
-  //   $('.cost_elements').scrollLeft($('.cost_elements').scrollLeft() + $('.cost_item').outerWidth);
-  //
-  // })
-  //
-  // $('.cost_elements .cost_slide_left').on('click', function(e) {
-  //
-  //   if ($('.cost_elements').scrollLeft() === 0) return
-  //   // $('.cost_elements').scrollLeft($('.cost_elements').scrollLeft() - mCostScrollStep);
-  //   $('.cost_elements').scrollLeft($('.cost_elements').scrollLeft() - $('.cost_item').outerWidth));
-  //
-  // })
+  $('.cost.slider button').on('click', function(e) {
+
+    if ($(this).hasClass('cost_scroll_right')) {
+
+      if ($('.cost_elements').scrollLeft() >= $('.cost_elements')[0].scrollWidth - $('.cost_elements').outerWidth()) {
+        $('.cost_elements').scrollLeft(0)
+      } else {
+        $('.cost_elements').scrollLeft($('.cost_elements').scrollLeft() + $('.cost_item').outerWidth(true));
+      }
+
+    } else if ($(this).hasClass('cost_scroll_left')) {
+
+      if ($('.cost_elements').scrollLeft() === 0) {
+        $('.cost_elements').scrollLeft($('.cost_elements')[0].scrollWidth - $('.cost_elements').outerWidth())
+      } else {
+        $('.cost_elements').scrollLeft($('.cost_elements').scrollLeft() - $('.cost_item').outerWidth(true));
+      }
+    }
+  })
 
   // rates show all
 
-  $('.rates_showall').on('click', function () {
+  $('.rates_showall').on('click', function() {
     $(this).closest('.wrapper').css('max-height', 'unset');
-
   })
 
   // rates slider
@@ -263,80 +266,80 @@ $(document).ready(function() {
   }
 
 
-// popup
+  // popup
 
-// function Popup(options){
-//     this.modal = document.querySelector(options.modal);
-//     this.overlay = document.querySelector(options.overlay);
-// 	this.esc = document.querySelector(options.esc);
-//
-//     var popup = this;
-//
-//     this.open = function(content){
-//         popup.modal.innerHTML = content;
-//         popup.overlay.classList.add('open');
-// 		popup.esc.classList.add('open');
-//         popup.modal.classList.add('open');
-//     }
-//
-//     this.close = function(){
-//         popup.overlay.classList.remove('open');
-// 		popup.esc.classList.remove('open');
-//         popup.modal.classList.remove('open');
-//     }
-//
-// 	this.esc.onclick = popup.close;
-//     this.overlay.onclick = popup.close;
-// }
+  // function Popup(options){
+  //     this.modal = document.querySelector(options.modal);
+  //     this.overlay = document.querySelector(options.overlay);
+  // 	this.esc = document.querySelector(options.esc);
+  //
+  //     var popup = this;
+  //
+  //     this.open = function(content){
+  //         popup.modal.innerHTML = content;
+  //         popup.overlay.classList.add('open');
+  // 		popup.esc.classList.add('open');
+  //         popup.modal.classList.add('open');
+  //     }
+  //
+  //     this.close = function(){
+  //         popup.overlay.classList.remove('open');
+  // 		popup.esc.classList.remove('open');
+  //         popup.modal.classList.remove('open');
+  //     }
+  //
+  // 	this.esc.onclick = popup.close;
+  //     this.overlay.onclick = popup.close;
+  // }
 
-// window.onload = function(){
-//     var p = new Popup({
-//         modal: '.modal',
-//         overlay: '.overlay',
-// 		esc: '.exit'
-//
-//     });
-//
-//
-// 	document.querySelector('.footer__requisites').onclick = function(){
-//         var requisites = document.querySelector('.popup__requisites');
-//         p.open(requisites.innerHTML);
-//     };
-//
-// 	document.querySelector('.return__requisites').onclick = function(){
-//         var requisites = document.querySelector('.popup__requisites');
-//         p.open(requisites.innerHTML);
-//     };
-//
-// 	document.querySelector('.return__volonteer__link').onclick = function(){
-//         var requisites = document.querySelector('.popup__volunteer');
-//         p.open(requisites.innerHTML);
-//     };
-//
-// 	document.querySelector('.news1').onclick =
-// 	function(){
-//         var requisites = document.querySelector('.popup__news1');
-//         p.open(requisites.innerHTML);
-//     };
-//
-// 	document.querySelector('.news2').onclick =
-// 	function(){
-//         var requisites = document.querySelector('.popup__news2');
-//         p.open(requisites.innerHTML);
-//     };
-//
-// 	document.querySelector('.news3').onclick =
-// 	function(){
-//         var requisites = document.querySelector('.popup__news3');
-//         p.open(requisites.innerHTML);
-//     };
-// }
+  // window.onload = function(){
+  //     var p = new Popup({
+  //         modal: '.modal',
+  //         overlay: '.overlay',
+  // 		esc: '.exit'
+  //
+  //     });
+  //
+  //
+  // 	document.querySelector('.footer__requisites').onclick = function(){
+  //         var requisites = document.querySelector('.popup__requisites');
+  //         p.open(requisites.innerHTML);
+  //     };
+  //
+  // 	document.querySelector('.return__requisites').onclick = function(){
+  //         var requisites = document.querySelector('.popup__requisites');
+  //         p.open(requisites.innerHTML);
+  //     };
+  //
+  // 	document.querySelector('.return__volonteer__link').onclick = function(){
+  //         var requisites = document.querySelector('.popup__volunteer');
+  //         p.open(requisites.innerHTML);
+  //     };
+  //
+  // 	document.querySelector('.news1').onclick =
+  // 	function(){
+  //         var requisites = document.querySelector('.popup__news1');
+  //         p.open(requisites.innerHTML);
+  //     };
+  //
+  // 	document.querySelector('.news2').onclick =
+  // 	function(){
+  //         var requisites = document.querySelector('.popup__news2');
+  //         p.open(requisites.innerHTML);
+  //     };
+  //
+  // 	document.querySelector('.news3').onclick =
+  // 	function(){
+  //         var requisites = document.querySelector('.popup__news3');
+  //         p.open(requisites.innerHTML);
+  //     };
+  // }
 
 
-/*****************************************************/
+  /*****************************************************/
 
   $(document).on('mouseup touchend', function() {
-    touch = clicking=  false;
+    touch = clicking = false;
   })
 
 });
