@@ -13,6 +13,16 @@
 </head>
 <body>
 
+  <div id="modal">
+    <div class="modal_content">
+      <div class="modal_close" title="закрыть окно">
+        <img src="img/menu-line.svg" alt="закрыть окно">
+        <img src="img/menu-line.svg" alt="закрыть окно">
+      </div>
+      <div class="content_place"></div>
+    </div>
+  </div>
+
   <div id="fixed_menu" class="fixed_menu_wrapper">
     <nav class="fixed_menu">
       <a href="#" class="logo"><span class="text-red">Expert</span>Target</a>
@@ -257,8 +267,8 @@
         </ul>
         <div class="rates_item_footer">
           <span class="rates_price">5 000 руб.</span>
-          <a href="" class="rates_readmore">Подробнее
-          <img src="img/cost-arrow.svg" alt="arrow"></a>
+          <!-- для ссылок модальных окон вставить id (с решеткой) popap в href и задать класс popup_link -->
+          <a href="#more_popup1" class="popup_link rates_readmore">Подробнее<img src="img/cost-arrow.svg" alt="arrow"></a>
         </div>
       </div>
       <div class="rates_item">
@@ -272,7 +282,7 @@
         </ul>
         <div class="rates_item_footer">
           <span class="rates_price">15 000 руб.</span>
-          <a href="" class="rates_readmore">Подробнее<img src="img/cost-arrow.svg" alt="arrow"></a>
+          <a href="#more_popup2" class="popup_link rates_readmore">Подробнее<img src="img/cost-arrow.svg" alt="arrow"></a>
         </div>
       </div>
       <div class="rates_item">
@@ -286,7 +296,7 @@
         </ul>
         <div class="rates_item_footer">
           <span class="rates_price">30 000 руб.</span>
-          <a href="" class="rates_readmore">Подробнее<img src="img/cost-arrow.svg" alt="arrow"></a>
+          <a href="#more_popup3" class="popup_link rates_readmore">Подробнее<img src="img/cost-arrow.svg" alt="arrow"></a>
         </div>
       </div>
       <div class="rates_item">
@@ -300,7 +310,7 @@
         </ul>
         <div class="rates_item_footer">
           <span class="rates_price">55 000 руб.</span>
-          <a href="" class="rates_readmore">Подробнее<img src="img/cost-arrow.svg" alt="arrow"></a>
+          <a href="#more_popup2" class="popup_link rates_readmore">Подробнее<img src="img/cost-arrow.svg" alt="arrow"></a>
         </div>
       </div>
       <div class="rates_item">
@@ -314,7 +324,7 @@
         </ul>
         <div class="rates_item_footer">
           <span class="rates_price">300 000 руб.</span>
-          <a href="" class="rates_readmore">Подробнее<img src="img/cost-arrow.svg" alt="arrow"></a>
+          <a href="#more_popup2" class="popup_link rates_readmore">Подробнее<img src="img/cost-arrow.svg" alt="arrow"></a>
         </div>
       </div>
       <div class="rates_item">
@@ -328,7 +338,7 @@
         </ul>
         <div class="rates_item_footer">
           <span class="rates_price">300 000 руб.</span>
-          <a href="" class="rates_readmore">Подробнее<img src="img/cost-arrow.svg" alt="arrow"></a>
+          <a href="#more_popup2" class="popup_link rates_readmore">Подробнее<img src="img/cost-arrow.svg" alt="arrow"></a>
         </div>
       </div>
       <div class="rates_item">
@@ -342,7 +352,7 @@
         </ul>
         <div class="rates_item_footer">
           <span class="rates_price">300 000 руб.</span>
-          <a href="" class="rates_readmore">Подробнее<img src="img/cost-arrow.svg" alt="arrow"></a>
+          <a href="#more_popup2" class="popup_link rates_readmore">Подробнее<img src="img/cost-arrow.svg" alt="arrow"></a>
         </div>
       </div>
       <div class="rates_item">
@@ -356,7 +366,7 @@
         </ul>
         <div class="rates_item_footer">
           <span class="rates_price">300 000 руб.</span>
-          <a href="" class="rates_readmore">Подробнее<img src="img/cost-arrow.svg" alt="arrow"></a>
+          <a href="#more_popup2" class="popup_link rates_readmore">Подробнее<img src="img/cost-arrow.svg" alt="arrow"></a>
         </div>
       </div>
       <div class="rates_slide_controls">
@@ -467,6 +477,21 @@
       <p class="footer_text">© ExpertTarget, 2019. Designed by Alex Burenin</p>
     </div>
   </footer>
+
+  <div id="more_popup1" class="popup">
+    <p class="text text-red">Попап 1</p>
+    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate praesentium consequuntur ad eum excepturi nulla ex, rerum quo libero ab, sequi delectus. Tenetur totam ab deserunt nihil suscipit fuga sapiente!</p>
+  </div>
+
+  <div id="more_popup2" class="popup">
+    <p class="text text-red">Попап 2</p>
+    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate praesentium consequuntur ad eum excepturi nulla ex, rerum quo libero ab, sequi delectus. Tenetur totam ab deserunt nihil suscipit fuga sapiente!</p>
+  </div>
+
+  <div id="more_popup3" class="popup">
+    <p class="text text-red">Попап 3</p>
+    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate praesentium consequuntur ad eum excepturi nulla ex, rerum quo libero ab, sequi delectus. Tenetur totam ab deserunt nihil suscipit fuga sapiente!</p>
+  </div>
 
 </body>
 
