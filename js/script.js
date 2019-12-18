@@ -1,11 +1,11 @@
 $(document).ready(function() {
 
   // fixed menu
+  var heightAfterShowMenu, menu = $("#fixed_menu");
   function getHeightAfterShowMenu () {
-    var heightAfterShowMenu = Number($('header').outerHeight(true)) + Number($('.banner').outerHeight(true)) + Number($('.main_types').outerHeight());
+    heightAfterShowMenu = Number($('header').outerHeight(true)) + Number($('.banner').outerHeight(true)) + Number($('.main_types').outerHeight());
   }
   getHeightAfterShowMenu();
-  var menu = $("#fixed_menu");
 
   $(document).scroll(function() {
     var y = $(document).scrollTop()
@@ -19,18 +19,20 @@ $(document).ready(function() {
   // mobile menu
   $('.mobile_nav_menu').on('click', function() {
     $('#mobile-menu').css('left', '0');
-    $('.wrapper').css({
-      'transform': 'translateX(calc(100% - 40px))'
+    $('.wrapper, .action_img, .action').css({
+      'transform': 'translateX(calc(100% - 55px))'
     });
   });
 
   $('.mobile_menu_close, .mobile_menu_overlay').on('click', function() {
     $('#mobile-menu').css('left', '-100%');
-    $('.wrapper').css('transform', 'translateX(0)');
+    $('.wrapper, .action_img, .action').css('transform', 'translateX(0)');
   });
 
 
   // tabs
+  $($('.tabs__links .tabs__link')[0]).addClass('active_tab')
+  $('.tabs__content').html($($('.tabs__links .tabs__link')[0]).find('.tab-info').html());
   $('.tabs__links .tabs__link').on('click', function() {
     if (!$(this).hasClass('active_tab')) {
       $('.tabs__links .tabs__link').removeClass('active_tab');
@@ -43,11 +45,11 @@ $(document).ready(function() {
   var clicking = false;
   var advantageCount = $('.advantage_item').length;
   $('.advantage_scroll__count .count_total').text(advantageCount < 10 ? '0' + advantageCount : advantageCount)
-  var advantageCoordY = 0
+  var advantageBtnStep, advantageScrollStep, advantageCoordY = 0
 
   function getAdventureVariables() {
-    var advantageScrollStep = ($('.advantage_items')[0].scrollHeight - $('.advantage_items').outerHeight()) / (advantageCount - 1);
-    var advantageBtnStep = ($('.advantage_scroll__btn').height() - $('.advantage_scroll__btn button').height()) / (advantageCount - 1);
+    advantageScrollStep = ($('.advantage_items')[0].scrollHeight - $('.advantage_items').outerHeight()) / (advantageCount - 1);
+    advantageBtnStep = ($('.advantage_scroll__btn').height() - $('.advantage_scroll__btn button').height()) / (advantageCount - 1);
   }
   getAdventureVariables();
 
@@ -120,12 +122,15 @@ $(document).ready(function() {
   // cost modile
   var touch = false;
   var countLength = $('.cost_elements .cost_item').length;
-  var costCoordX = 0
+  var mCostScrollStep, mCostLineStep, costCoordX = 0;
+  $('.cost_line-mobile span').width(100 / countLength + '%');
 
   function costMobile() {
-    $('.cost_line-mobile span').width(100 / countLength + '%');
-    var mCostScrollStep = ($('.cost_elements')[0].scrollWidth - $('.cost_elements').outerWidth()) / costLineLength;
-    var mCostLineStep = ($('.cost_line-mobile').width() - $('.cost_line-mobile span').width()) / costLineLength;
+    mCostScrollStep = ($('.cost_elements')[0].scrollWidth - $('.cost_elements').outerWidth()) / costLineLength;
+    mCostLineStep = ($('.cost_line-mobile').width() - $('.cost_line-mobile span').width()) / costLineLength;
+
+    $('.cost_elements').scrollLeft(0);
+    $('.cost_line-mobile span').css('left', '0');
   }
   costMobile();
 
@@ -153,7 +158,6 @@ $(document).ready(function() {
         $('.cost_line-mobile span').css('left', Number($('.cost_line-mobile span').css('left').replace('px', '')) - mCostLineStep)
         $('.cost_elements').scrollLeft($('.cost_elements').scrollLeft() - mCostScrollStep);
 
-
         costCoordX = e.clientX
       } else if (costCoordX - 30 > e.clientX) {
 
@@ -162,10 +166,7 @@ $(document).ready(function() {
         $('.cost_line-mobile span').css('left', Number($('.cost_line-mobile span').css('left').replace('px', '')) + mCostLineStep)
         $('.cost_elements').scrollLeft($('.cost_elements').scrollLeft() + mCostScrollStep);
 
-
-
         costCoordX = e.clientX
-
       }
     };
   });
@@ -206,11 +207,14 @@ $(document).ready(function() {
     this.count = obj.count || 1;
 
     if (obj.dots) {
+      document.querySelector(obj.dots).innerHTML = '';
       for (let j = 0; j < this.images.length; j++) {
         let span = document.createElement('span');
         document.querySelector(obj.dots).appendChild(span);
+        this.images[j].classList.remove('showed');
       }
       document.querySelector(obj.dots + ' span').classList.add('active');
+      this.images[0].classList.add('showed');
       this.dots = document.querySelector(obj.dots).childNodes;
     }
 
@@ -254,7 +258,7 @@ $(document).ready(function() {
   }
 
   function initRatesSlider () {
-    if ($(window).width() <= 768) {
+    if ($(window).width() <= 768 && $('.rates').length) {
       new Slider({
         images: '.rates_item',
         btnPrev: '.rates_slide_left',
@@ -264,7 +268,6 @@ $(document).ready(function() {
       });
     }
   }
-
   initRatesSlider();
 
   // popup
@@ -294,6 +297,7 @@ $(document).ready(function() {
   $(window).resize(function() {
     getHeightAfterShowMenu();
     getAdventureVariables();
+    costMobile();
     initRatesSlider();
   });
 
