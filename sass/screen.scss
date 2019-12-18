@@ -10,6 +10,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 $red: #E81E1E;
 $default_size: 20px;
+$large_size: 26px;
 
 body {
 	font-family: 'Proxima Nova', sans-serif;
@@ -1321,6 +1322,114 @@ footer {
 }
 
 @media (min-width: 2560px) {
+  body {
+    font-size: $large_size;
+  }
+
+  .main_btn {
+  	padding: 30px 40px;
+  }
+
+  .wrapper, .fixed_menu_wrapper .fixed_menu {
+    max-width: 1800px;
+  }
+
+  .banner {
+  	.banner_info {
+  		h1, h3, .banner_buttons {
+  			max-width: 70%;
+  		}
+  	}
+  	img {
+  		width: 50%;
+  	}
+  }
+
+  .customization {
+  	img {
+      width: 40%;
+  	}
+  	.customization_info {
+  		max-width: 50%;
+  	}
+  }
+  .customization.full-center {
+    max-width: 1140px;
+    .customization_info {
+      max-width: 70%;
+    }
+  }
+
+  .main_tabs {
+  	 h2 {
+  		 max-width: 700px;
+  	 }
+  	 .tabs .tabs__content {
+				.tab_full-width {
+					max-width: 1140px;
+          img {
+            width: 70%;
+          }
+				}
+				.tab_half-width {
+					.text {
+						max-width: 50%;
+					}
+          img {
+            width: 40%;
+          }
+				}
+  	 }
+  }
+
+  .rates {
+    .wrapper {
+      max-height: 690px;
+    }
+    .rates_info, .rates_item {
+      height: 320px;
+    }
+  }
+
+  .advantage {
+  	.advantage_info {
+  		max-width: 30%;
+      .advantage_image {
+        width: 100%;
+      }
+  	}
+  	.advantage_scroll {
+  		width: 10%;
+  	}
+  	.advantage_items {
+  		max-width: 50%;
+  		.advantage_item {
+        height: calc(33.3% - 40px);
+  		}
+  	}
+  }
+
+  .action_img img {
+		max-width: 1140px;
+    width: 100%;
+  }
+
+  .action {
+  	.text {
+  		width: 700px;
+  	}
+  	form .action_inputs {
+			input {
+				width: 435px;
+			}
+			select {
+				width: 345px;
+			}
+			.main_btn {
+				width: max-content;
+			}
+		}
+  }
 
 }
 
