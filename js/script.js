@@ -25,7 +25,7 @@ $(document).ready(function() {
   });
 
   $('.mobile_menu_close, .mobile_menu_overlay').on('click', function() {
-    $('#mobile-menu').css('left', '-100%');
+    $('#mobile-menu').css('left', '-200%');
     $('.wrapper, .action_img, .action').css('transform', 'translateX(0)');
   });
 
@@ -252,11 +252,37 @@ $(document).ready(function() {
     }
     document.querySelector(slider.btnPrev).onclick = slider.prev;
     document.querySelector(slider.btnNext).onclick = slider.next;
+
+    var touchCoord = 0;
+    $(obj.images).on('mousedown touchstart', function(e) {
+      e.preventDefault();
+      slideRates = true;
+      if (e.touches) {e = e.touches[0]}
+      touchCoord = e.clientX
+    });
+
+
+    $(obj.images).on('mousemove touchmove', function(e) {
+      e.preventDefault();
+      if (slideRates !== false) {
+        if (e.touches) {e = e.touches[0]}
+        if (touchCoord + 80 < e.clientX) {
+          slider.prev();
+          slideRates = false;
+        } else if (touchCoord - 80 > e.clientX) {
+          slider.next();
+          slideRates = false;
+        }
+
+      };
+    });
+
     if (slider.auto) {
       setInterval(slider.next, slider.rate);
     }
   }
 
+  var slideRates = false;
   function initRatesSlider () {
     if ($(window).width() <= 768 && $('.rates').length) {
       new Slider({
@@ -291,7 +317,7 @@ $(document).ready(function() {
   /*****************************************************/
 
   $(document).on('mouseup touchend', function() {
-    touch = clicking = false;
+    touch = clicking = slideRates = false;
   })
 
   $(window).resize(function() {

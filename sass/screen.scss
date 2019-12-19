@@ -14,14 +14,17 @@ $large_size: 26px;
 
 body {
 	font-family: 'Proxima Nova', sans-serif;
-	width: 100%;
 	color: #000000;
-	overflow-x: hidden;
   font-size: $default_size;
 
   a {
   	text-decoration: none;
   }
+}
+
+#wrapper {
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -87,12 +90,6 @@ a.link_select {
 	background-position: top right;
 	background-repeat: no-repeat;
 	padding-right: 22px;
-}
-
-.logo {
-	font-weight: bold;
-	font-size: 1rem;
-	color: #3C3E42;
 }
 
 .text-red {
@@ -1093,6 +1090,7 @@ footer {
 	align-items: center;
 	position: fixed;
 	top: 0;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
 
 	.mobile_nav_menu {
 		display: flex;
@@ -1114,7 +1112,7 @@ footer {
 	right: 0;
 	z-index: 3;
 	transition: 0.3s;
-	width: 100%;
+	width: 100vw;
 	height: 100%;
 
 	.mobile_menu_overlay {
@@ -1609,6 +1607,10 @@ footer {
 		flex-wrap: wrap;
 		justify-content: center;
     margin-bottom: 60px;
+
+    .customization_info {
+      margin-left: 0;
+    }
 	}
 
 	.action form .action_inputs {
@@ -1760,6 +1762,10 @@ footer {
     .rates_item {
       width: 100%;
       display: none;
+
+      .text {
+        max-width: 300px;
+      }
     }
 
     .showed {
@@ -1950,7 +1956,7 @@ footer {
 			}
 
 			.text {
-				font-size: 0.8;
+				font-size: 0.8em;
 			}
 
 			.banner_buttons {
