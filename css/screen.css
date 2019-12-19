@@ -208,14 +208,17 @@ header .header_tel:hover {
   justify-content: space-between;
   margin-bottom: 70px;
 }
-.main_types img {
+.main_types a {
   width: calc(33% - 20px);
   margin-right: 30px;
 }
-.main_types img:last-child {
+.main_types a img {
+  width: 100%;
+}
+.main_types a:last-child {
   margin-right: 0;
 }
-.main_types img.main_type__active {
+.main_types a.main_type__active img {
   -webkit-filter: drop-shadow(0px 20px 35px rgba(25, 33, 45, 0.16));
   filter: drop-shadow(0px 20px 35px rgba(25, 33, 45, 0.16));
 }
@@ -1396,7 +1399,7 @@ footer .footer_text {
     justify-content: space-around;
     margin-bottom: 20px;
   }
-  .main_types img, .main_types img:last-child {
+  .main_types a, .main_types a:last-child {
     width: 45%;
     margin: 0 0 20px;
   }
@@ -1674,7 +1677,7 @@ footer .footer_text {
     padding: 0 16px;
   }
 
-  .main_types img, .main_types img:last-child {
+  .main_types a, .main_types a:last-child {
     width: auto;
     margin: 0 auto 20px;
   }
@@ -1698,7 +1701,7 @@ footer .footer_text {
     width: 100%;
   }
 
-  .main_types img, .main_types img:last-child {
+  .main_types a, .main_types a:last-child {
     width: 100%;
   }
 

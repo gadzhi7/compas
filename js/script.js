@@ -297,8 +297,9 @@ $(document).ready(function() {
   initRatesSlider();
 
   // popup
-  $('.popup_link').on('click', function (e) {
-    e.preventDefault()
+  $('.popup_link').on('click touchstart', function (e) {
+    e.stopPropagation();
+    e.preventDefault();
     if ($($(this).attr('href')).length) {
       $('#modal .content_place').html($($(this).attr('href')).html())
       $('#modal').css('display', 'flex');
