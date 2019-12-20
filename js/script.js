@@ -193,8 +193,16 @@ $(document).ready(function() {
   })
 
   // rates show all
+  var ratesMaxHeight = $('.rates .wrapper').css('max-height');
   $('.rates_showall').on('click', function() {
-    $(this).closest('.wrapper').css('max-height', 'unset');
+    if ($('.rates .wrapper').css('max-height') === 'none') {
+      $(this).closest('.wrapper').css('max-height', ratesMaxHeight);
+      $('.rates_showall').removeClass('uncover').text('Показать все');
+    } else {
+      $(this).closest('.wrapper').css('max-height', 'unset');
+      $('.rates_showall').addClass('uncover').text('Скрыть все');
+    }
+
   })
 
   // rates slider
