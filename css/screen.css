@@ -34,11 +34,6 @@ table {
 }
 
 /* general */
-svg {
-  width: 100%;
-  height: 100%;
-}
-
 body {
   font-family: "Proxima Nova", sans-serif;
   color: #000000;
