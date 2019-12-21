@@ -790,6 +790,7 @@ header {
 				width: 100px;
 				height: 100px;
 				margin-right: 40px;
+        flex-shrink: 0;
 			}
 
 			.text {
