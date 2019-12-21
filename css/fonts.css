@@ -20,7 +20,7 @@
     font-display: auto;
 }
 
-/* @font-face {
+@font-face {
     font-family: 'Proxima Nova';
     src: url('../fonts/ProximaNova-Semibold.eot');
     src: url('../fonts/ProximaNova-Semibold.eot?#iefix') format('embedded-opentype'),
@@ -29,4 +29,4 @@
     font-weight: 600;
     font-style: normal;
     font-display: auto;
-} */
+}
