@@ -300,7 +300,7 @@ header {
 
 		.cost_static_footnote {
 			margin-top: 30px;
-			font-size: 0.8rem;
+			font-size: 0.8em;
 			line-height: 1.7;
 			display: block;
 			color: #415A7D;
@@ -584,6 +584,7 @@ header {
       text-transform: uppercase;
       width: fit-content;
       min-width: 115px;
+      max-width: 140px;
       margin-top: 42px;
       cursor: pointer;
       padding-right: 39px;
@@ -595,6 +596,7 @@ header {
         width: 16px;
         height: 16px;
         position: absolute;
+        top: calc(100% - 8px);
         right: 0;
         background-image: url(../img/chevron-down.svg);
         transition: 0.3s;
@@ -1879,7 +1881,6 @@ footer {
 
 		.advantage_items {
 			max-height: unset;
-      // max-width: unset;
       @include mauto;
 
 			.advantage_item {
