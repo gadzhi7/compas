@@ -91,7 +91,7 @@ $(document).ready(function() {
   var costLineLength = $('.cost_elements .cost_item').length / 2;
   $('.cost_scroll_line span').height(100 / costLineLength + '%');
 
-  var costScrollStep = ($('.cost_elements')[0].scrollHeight - $('.cost_elements').outerHeight() - 20) / costLineLength;
+  var costScrollStep = ($('.cost_elements')[0].scrollHeight - $('.cost_elements').outerHeight() - 10) / costLineLength;
 
   var costLineStep = ($('.cost_scroll_line').height() - $('.cost_scroll_line span').height()) / costLineLength;
 
@@ -102,7 +102,7 @@ $(document).ready(function() {
 
     if ($(e.target).hasClass('cost_scroll_dowm')) {
 
-      if ($('.cost_elements').scrollTop() <= ($('.cost_elements')[0].scrollHeight - $('.cost_elements').outerHeight() - 30)) {
+      if ($('.cost_elements').scrollTop() <= ($('.cost_elements')[0].scrollHeight - $('.cost_elements').outerHeight() - 20)) {
         $('.cost_scroll_line span').css('top', Number($('.cost_scroll_line span').css('top').replace('px', '')) + costLineStep)
         $('.cost_elements').scrollTop($('.cost_elements').scrollTop() + costScrollStep);
       }

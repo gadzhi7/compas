@@ -542,7 +542,7 @@ header .header_tel:hover {
   text-transform: uppercase;
   width: fit-content;
   min-width: 115px;
-  max-width: 140px;
+  max-width: 180px;
   margin-top: 42px;
   cursor: pointer;
   padding-right: 39px;
@@ -554,7 +554,7 @@ header .header_tel:hover {
   width: 16px;
   height: 16px;
   position: absolute;
-  top: calc(100% - 8px);
+  top: calc(50% - 8px);
   right: 0;
   background-image: url(../img/chevron-down.svg);
   transition: 0.3s;
