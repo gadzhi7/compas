@@ -1158,7 +1158,6 @@ footer {
     h4 {
       font-weight: bold;
       font-size: 1.8em;
-      line-height: 1.56;
       color: #3C3E42;
     }
 
@@ -1347,23 +1346,11 @@ footer {
 			flex-wrap: wrap;
 			position: absolute;
 			top: 0px;
-			padding: 16px 15px;
-			box-sizing: border-box;
 			right: -55px;
 			cursor: pointer;
 			background-color: #fff;
 			z-index: 1;
 			box-shadow: 0px 2px 10px rgba(#000, 0.1);
-
-			img:first-child {
-				margin-top: 8px;
-				transform: rotate(45deg);
-			}
-
-			img:last-child {
-				margin-top: -15px;
-				transform: rotate(-45deg);
-			}
 		}
 
 		.mobile_menu_head {
@@ -1485,7 +1472,7 @@ footer {
     max-height: 80%;
     box-sizing: border-box;
     overflow-y: auto;
-    padding: 37px 32px;
+    padding: 32px;
     position: relative;
     background-color: #ffffff;
     border-radius: 14px;
@@ -1498,6 +1485,7 @@ footer {
       flex-wrap: wrap;
       width: 55px;
       height: 55px;
+      z-index: 2;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -1623,6 +1611,21 @@ footer {
 			}
 		}
   }
+
+  .customers {
+    .customers_item .customer_main {
+      width: 500px;
+    }
+    .customers_info .customers_btn {
+      width: max-content;
+    }
+  }
+
+  #modal .modal_content {
+    max-width: 950px;
+    min-width: 430px;
+  }
+
 
 }
 
@@ -2344,6 +2347,10 @@ footer {
       margin-bottom: 5px;
 		}
 	}
+
+  #modal .modal_content {
+    padding: 30px 15px;
+  }
 
 }
 
