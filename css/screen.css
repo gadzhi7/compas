@@ -521,6 +521,13 @@ header .header_tel:hover {
   line-height: 2;
 }
 
+.tabs_png .tabs .tabs__content .tab_full-width img, .tabs_png .tabs .tabs__content .tab_half-width img {
+  max-width: 400px;
+  max-height: 330px;
+  object-fit: contain;
+  object-position: center;
+}
+
 .rates {
   padding: 60px 0;
   background-color: #f6f9fc;
@@ -1366,13 +1373,15 @@ footer .footer_text {
   }
   .main_tabs .tabs .tabs__content .tab_full-width img {
     width: 60%;
+    max-width: none;
+    max-height: none;
   }
   .main_tabs .tabs .tabs__content .tab_half-width .text {
     max-width: calc(65% - 90px);
   }
   .main_tabs .tabs .tabs__content .tab_half-width img {
     width: 35%;
-    max-height: 500px;
+    max-height: 530px;
   }
 
   .rates .wrapper {
