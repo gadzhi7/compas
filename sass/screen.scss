@@ -1549,15 +1549,16 @@ footer {
 				.tab_full-width {
 					max-width: 1140px;
           img {
-            width: 70%;
+            width: 60%;
           }
 				}
 				.tab_half-width {
 					.text {
-						max-width: calc(50% - 84px);
+						max-width: calc(65% - 90px);
 					}
           img {
-            width: 40%;
+            width: 35%;
+            max-height: 500px;
           }
 				}
   	 }
