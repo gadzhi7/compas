@@ -363,6 +363,11 @@ $(document).ready(function() {
     $('#modal .content_place').html('')
   })
 
+  $('video').on('click', function() {
+    this.play()
+  });
+
+
   /*****************************************************/
 
   $(document).on('mouseup touchend', function() {
