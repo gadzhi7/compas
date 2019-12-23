@@ -1365,13 +1365,14 @@ footer .footer_text {
     max-width: 1140px;
   }
   .main_tabs .tabs .tabs__content .tab_full-width img {
-    width: 70%;
+    width: 60%;
   }
   .main_tabs .tabs .tabs__content .tab_half-width .text {
-    max-width: calc(50% - 84px);
+    max-width: calc(65% - 90px);
   }
   .main_tabs .tabs .tabs__content .tab_half-width img {
-    width: 40%;
+    width: 35%;
+    max-height: 500px;
   }
 
   .rates .wrapper {
