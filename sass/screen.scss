@@ -1586,6 +1586,10 @@ footer {
             max-width: none;
             max-height: none;
           }
+          .tabs_video .phone_video {
+            left: 26%;
+            width: auto;
+          }
 				}
 				.tab_half-width {
 					.text {
@@ -1595,7 +1599,7 @@ footer {
             width: 35%;
             max-height: 530px;
           }
-          div {
+          .tabs_video {
             width: 35%;
             img {
               width: 100%;
@@ -1996,22 +2000,26 @@ footer {
 
                 .phone_video {
                   position: absolute;
+                  object-fit: cover;
+                  object-position: center;
+                }
+
+                .video_vertical {
+                  max-width: 197px;
                   left: calc(50% - 99px);
                   top: 15%;
                   height: 73%;
-                  object-fit: cover;
-                  object-position: center;
-                  max-width: 197px;
                 }
               }
 
               .hide650 {
                 display: none;
               }
-              img.show650 {
+              img.show650, video.show650 {
                 display: block;
                 width: calc(100% + 32px);
                 margin-left: -16px;
+                margin-top: 0;
               }
 
               .text {
