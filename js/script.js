@@ -363,10 +363,9 @@ $(document).ready(function() {
     $('#modal .content_place').html('')
   })
 
-  $('video').on('click', function() {
-    this.play()
+  $('body').on('click', '.phone_video', function() {
+    this.paused ? this.play() : this.pause();
   });
-
 
   /*****************************************************/
 

@@ -523,6 +523,20 @@ header {
 						max-width: 100%;
 					}
 
+          .tabs_video {
+            position: relative;
+            @include mauto;
+
+            .phone_video {
+              position: absolute;
+              height: 88%;
+              top: 6%;
+              left: 11%;
+              width: 78%;
+              object-fit: cover;
+            }
+          }
+
           img.show650 {
           	display: none;
           }
@@ -549,6 +563,20 @@ header {
 					align-items: center;
           max-width: 80%;
           @include mauto;
+
+          div {
+            position: relative;
+            @include mauto;
+
+            .phone_video {
+              position: absolute;
+              width: 88%;
+              left: 6%;
+              top: 11.5%;
+              height: 77%;
+              object-fit: cover;
+            }
+          }
 
 					.text {
             margin-left: 84px;
@@ -1567,6 +1595,17 @@ footer {
             width: 35%;
             max-height: 530px;
           }
+          div {
+            width: 35%;
+            img {
+              width: 100%;
+            }
+            .phone_video {
+              top: 11%;
+              width: 53%;
+              left: calc(50% - 115px);
+            }
+          }
 				}
   	 }
   }
@@ -1633,7 +1672,6 @@ footer {
     max-width: 950px;
     min-width: 430px;
   }
-
 
 }
 
@@ -1951,6 +1989,20 @@ footer {
                 height: 100%;
                 max-height: 450px;
                 margin: 21px auto 0;
+              }
+
+              .tabs_video {
+                position: relative;
+
+                .phone_video {
+                  position: absolute;
+                  left: calc(50% - 99px);
+                  top: 15%;
+                  height: 73%;
+                  object-fit: cover;
+                  object-position: center;
+                  max-width: 197px;
+                }
               }
 
               .hide650 {

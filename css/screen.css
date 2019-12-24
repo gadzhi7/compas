@@ -491,6 +491,19 @@ header .header_tel:hover {
   display: block;
   max-width: 100%;
 }
+.main_tabs .tabs .tabs__content .tab_full-width .tabs_video {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+}
+.main_tabs .tabs .tabs__content .tab_full-width .tabs_video .phone_video {
+  position: absolute;
+  height: 88%;
+  top: 6%;
+  left: 11%;
+  width: 78%;
+  object-fit: cover;
+}
 .main_tabs .tabs .tabs__content .tab_full-width img.show650 {
   display: none;
 }
@@ -514,6 +527,19 @@ header .header_tel:hover {
   max-width: 80%;
   margin-right: auto;
   margin-left: auto;
+}
+.main_tabs .tabs .tabs__content .tab_half-width div {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+}
+.main_tabs .tabs .tabs__content .tab_half-width div .phone_video {
+  position: absolute;
+  width: 88%;
+  left: 6%;
+  top: 11.5%;
+  height: 77%;
+  object-fit: cover;
 }
 .main_tabs .tabs .tabs__content .tab_half-width .text {
   margin-left: 84px;
@@ -1382,6 +1408,17 @@ footer .footer_text {
     width: 35%;
     max-height: 530px;
   }
+  .main_tabs .tabs .tabs__content .tab_half-width div {
+    width: 35%;
+  }
+  .main_tabs .tabs .tabs__content .tab_half-width div img {
+    width: 100%;
+  }
+  .main_tabs .tabs .tabs__content .tab_half-width div .phone_video {
+    top: 11%;
+    width: 53%;
+    left: calc(50% - 115px);
+  }
 
   .rates .wrapper {
     max-height: 690px;
@@ -1700,6 +1737,18 @@ footer .footer_text {
     height: 100%;
     max-height: 450px;
     margin: 21px auto 0;
+  }
+  .main_tabs .tabs .tabs__links .tabs__link .tab-info .tabs_video {
+    position: relative;
+  }
+  .main_tabs .tabs .tabs__links .tabs__link .tab-info .tabs_video .phone_video {
+    position: absolute;
+    left: calc(50% - 99px);
+    top: 15%;
+    height: 73%;
+    object-fit: cover;
+    object-position: center;
+    max-width: 197px;
   }
   .main_tabs .tabs .tabs__links .tabs__link .tab-info .hide650 {
     display: none;
